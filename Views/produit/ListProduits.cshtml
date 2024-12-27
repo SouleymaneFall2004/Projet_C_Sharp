@@ -1,0 +1,28 @@
+<h1 class="text-3xl font-bold text-gray-800 mb-4">Gestion des Produits :</h1>
+
+<a href="/Commande/list" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-500">Commandes en atente</a>
+<a href="/Produit/add" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-500">Ajouter un produit</a>
+
+<table class="table-auto w-full bg-white shadow rounded">
+    <thead>
+        <tr class="bg-gray-200">
+            <th class="px-4 py-2">Libellé</th>
+            <th class="px-4 py-2">Quantité</th>
+            <th class="px-4 py-2">Prix unitaire</th>
+            <th class="px-4 py-2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produit in Model)
+        {
+            <tr class="border-t text-center">
+                <td class="px-4 py-2">@produit.Libelle</td>
+                <td class="px-4 py-2">@produit.Quantite</td>
+                <td class="px-4 py-2">@produit.PrixUnitaire</td>
+                <td class="px-4 py-2">
+                    <a href="/Produit/edit/@produit.Id" class="text-blue-500">Modifier le stock</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

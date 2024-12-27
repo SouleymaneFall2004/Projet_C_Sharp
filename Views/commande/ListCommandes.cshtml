@@ -1,0 +1,68 @@
+<h1 class="text-3xl font-bold text-gray-800 mb-4">Gestion des Commandes :</h1>
+
+@if (ViewContext.HttpContext.Request.Path == "/Commande/ListByClient")
+{
+    <a href="/Commande/Create/@ViewData["ClientId"]" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-500">
+        Ajouter une Commande
+    </a>
+}
+
+@if (ViewContext.HttpContext.Request.Path == "/Commande/list")
+{
+    <a href="/Produit/list" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-500">
+        Tous les produits
+    </a>
+}
+
+@if (ViewContext.HttpContext.Request.Path == "/Commande/filtrer")
+{
+    <form method="get" action="/Commande/filter" class="mb-4">
+        <label for="etat" class="block font-medium">Filtrer par état :</label>
+        <select id="etat" name="etat" class="border border-gray-300 p-2 w-full">
+            <option value="PAYEES">Payées</option>
+            <option value="EN_ATTENTE">En Attente</option>
+        </select>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded mt-2">Filtrer</button>
+    </form>
+}
+
+<table class="table-auto w-full bg-white shadow rounded">
+    <thead>
+        <tr class="bg-gray-200">
+            <th class="px-4 py-2">Date</th>
+            <th class="px-4 py-2">Montant</th>
+            <th class="px-4 py-2">État</th>
+            <th class="px-4 py-2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var commande in Model)
+        {
+            <tr class="border-t text-center">
+                <td class="px-4 py-2">@commande.Date</td>
+                <td class="px-4 py-2">@commande.Montant</td>
+                <td class="px-4 py-2">@commande.Etat</td>
+                <td class="px-6 py-4 border-b">
+                    @if (commande.Etat == Etat.A_LIVRER && ViewContext.HttpContext.Request.Path == "/Commande/ListByClient")
+                    {
+                        <form method="post" action="/Commande/changeStateToReceived/@commande.Id">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="text-green-600 hover:underline">
+                                Marquer comme "REÇU"
+                            </button>
+                        </form>
+                    }
+                    @if (commande.Etat == Etat.EN_ATTENTE && ViewContext.HttpContext.Request.Path == "/Commande/list")
+                    {
+                        <form method="post" action="/Commande/changeStateToDeliver/@commande.Id">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="text-green-600 hover:underline">
+                                Marquer comme "À LIVRER"
+                            </button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

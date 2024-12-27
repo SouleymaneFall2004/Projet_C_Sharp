@@ -1,0 +1,29 @@
+@model ExamenC_.Models.Produit
+
+<form method="post" class="space-y-4">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Créer un Produit</h1>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="text-red-500">
+            <ul>
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            </ul>
+        </div>
+    }
+    <div>
+        <label for="Libelle" class="block font-medium">Libellé</label>
+        <input type="text" id="Libelle" name="Libelle" class="border border-gray-300 p-2 w-full" required />
+    </div>
+    <div>
+        <label for="Quantite" class="block font-medium">Quantité</label>
+        <input type="number" id="Quantite" name="Quantite" class="border border-gray-300 p-2 w-full" required />
+    </div>
+    <div>
+        <label for="PrixUnitaire" class="block font-medium">Prix unitaire</label>
+        <input type="number" id="PrixUnitaire" name="PrixUnitaire" step="0.01" class="border border-gray-300 p-2 w-full" required />
+    </div>
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Ajouter</button>
+</form>

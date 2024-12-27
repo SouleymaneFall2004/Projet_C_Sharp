@@ -1,0 +1,79 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ExamenC_
+build_property.RootNamespace = ExamenC_
+build_property.ProjectDir = /Users/sfall/ExamenC#/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/sfall/ExamenC#
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/sfall/ExamenC\#/Views/client/ListClients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvY2xpZW50L0xpc3RDbGllbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/commande/CreerCommande.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvY29tbWFuZGUvQ3JlZXJDb21tYW5kZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/commande/ListCommandes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvY29tbWFuZGUvTGlzdENvbW1hbmRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/produit/AjouterProduit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvcHJvZHVpdC9Bam91dGVyUHJvZHVpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/produit/ListProduits.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvcHJvZHVpdC9MaXN0UHJvZHVpdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/produit/ModifierStock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvcHJvZHVpdC9Nb2RpZmllclN0b2NrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sfall/ExamenC\#/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ckks9lvdsm

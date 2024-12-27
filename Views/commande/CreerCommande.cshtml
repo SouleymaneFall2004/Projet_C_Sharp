@@ -1,0 +1,46 @@
+@model ExamenC_.Models.Commande
+
+@{
+    ViewBag.Title = "Créer une commande";
+    var produits = ViewBag.Produits as List<ExamenC_.Models.Produit>;
+}
+
+<h1 class="text-2xl font-bold mb-4">Créer une commande</h1>
+
+<form method="post" class="space-y-4" action="/Commande/create">
+    <input type="hidden" name="clientId" value="@ViewBag.ClientId" />
+
+    <div id="produit-container">
+        <div class="produit-group space-y-2">
+            <label class="block font-medium">Produit</label>
+            <select name="produitIds" class="border border-gray-300 p-2 w-full">
+                @if (produits != null) {
+                    @foreach (var produit in produits)
+                    {
+                        <option value="@produit.Id">@produit.Libelle (@produit.PrixUnitaire €)</option>
+                    }
+                }
+            </select>
+            <label class="block font-medium">Quantité</label>
+            <input type="number" name="quantites" class="border border-gray-300 p-2 w-full" min="1" required />
+        </div>
+    </div>
+
+    <button type="button" id="ajouter-produit" class="bg-green-500 text-white px-4 py-2 rounded">
+        Ajouter un produit
+    </button>
+
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+        Créer la commande
+    </button>
+</form>
+
+<script>
+    const container = document.getElementById('produit-container');
+    const addButton = document.getElementById('ajouter-produit');
+
+    addButton.addEventListener('click', () => {
+        const group = document.querySelector('.produit-group').cloneNode(true);
+        container.appendChild(group);
+    });
+</script>
